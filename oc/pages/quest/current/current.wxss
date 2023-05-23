@@ -1,0 +1,176 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0;
+}
+.currQuest {
+  width: 90%;
+  position: relative;
+  /* height: 100%;  */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+}
+.item {
+  position: relative;
+  width: 90%;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+.img {
+  width: 100%;
+}
+.rewardImg {
+ width: 60%;
+}
+.bestTime {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.countDown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress {
+  position: relative;
+  /* width: 70%; */
+  height: 100%;
+  margin: 0 10%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.timer {
+  font-size: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attraction{
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+.attractionImage{
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content:flex-start;
+  padding-bottom: 20px;
+}
+.attractionText {
+  text-align: center;
+  font-size: 15px;
+  width: 90%;
+}
+.button {
+  width: 25%;
+}
+.choice {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.time {
+  /* font-size: 25px; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  background-image: var(--timerBG);
+  background-repeat:no-repeat;
+  background-size: 100% auto;
+}
+.bestTime {
+  font-size: 15px;
+}
+.currTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.progress {
+  position: relative;
+  height: 120px;
+  width: 90%;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: flex-start;
+}
+.progressImg {
+  width: 130px;
+}
+.progressBar {
+  width: 90%;
+}
+.reward {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content:flex-start;
+}
+
+.rewardText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content:flex-start;
+  padding: 20px;
+}
+.rewardImage1{
+  /* position: relative; */
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.rewardImage2{
+  width: 100%;
+  height: 70px; 
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.rewardImg {
+  height: 70px;
+}

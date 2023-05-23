@@ -1,0 +1,63 @@
+<view class="container">
+  
+  <!-- <view class="item">
+    <view class="themeList" wx:for="{{themeList}}" wx:for-item = "theme" wx:key="index">
+      <view class="themeItem">
+        <image class="themeImage" mode="aspectFit" src="{{theme.theme_image}}" bindtap="toDetail" data-puzzleId="{{theme.theme_id}}"></image>
+        <text>{{theme.theme_name}}</text>
+      </view>
+    </view>
+  </view> -->
+  
+    <view class="item">
+      <view class="attractionItem">
+        <image class="attractionImage" mode="aspectFit" src="{{baseUrl+attraction.image}}"></image>
+        <text style="font-size: 25px;">{{attraction.name}}</text>
+        <text style="font-size: 15px;">{{attraction.description}}</text>
+    </view>
+  </view>
+
+
+  <!-- <view class="item2"> -->
+  
+    <view class="total" style="{{bgStyle}}">
+
+      <view class="city">
+        <view class="cellWrapper">
+          <t-cell class="mb-16" leftIcon="location" title="{{cityText}}" arrow hover note="" bind:click="onCityPicker" style="background-color: rgba(255, 255, 255, 0.8); border-radius: 10;"/>
+        </view>
+        <t-picker
+          visible="{{cityVisible}}"
+          value="{{cityValue}}"
+          data-key="city"
+          title="选择城市"
+          cancelBtn="取消"
+          confirmBtn="确认"
+          bindchange="onPickerChange"
+          bindpick="onColumnChange"
+          bindcancel="onPickerCancel"
+        >
+          <t-picker-item options="{{citys}}" />
+        </t-picker>
+      </view>
+
+      <!-- <image src="{{background}}" class="totalBackground"></image> -->
+      <view class="totalContent" style="white-space:pre-wrap">
+        <view class="totalText">
+            <view>已越过</view>
+            <view style="font-size: 45px;">{{percentage}}%</view>
+            <view>{{cityText}}</view>
+        </view>
+        <view class="totalProgress">
+          <van-circle value="{{percentage}}" stroke-width="18" size="220"></van-circle>
+        </view>
+      </view>  
+    </view>
+  <!-- </view> -->
+</view>
+
+
+
+
+
+

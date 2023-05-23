@@ -1,0 +1,56 @@
+<view class="container">
+
+  <view class="currQuest">
+    <text style=" text-align: center; background-color: rgba(255,255,255,0.8);">新任务</text>
+    <view class="ads">
+      <image class ="img" mode='aspectFit' src="{{baseUrl+quest.image}}"></image>
+    </view>
+
+    <view class="accept" style="{{bgStyle}}">
+      <image class="acceptButton" mode="heightFix" bindtap="acceptQuest" src="{{baseUrl+'/image/accept_button.png'}}"></image>
+    </view>
+    
+  </view>
+
+  <view class="reward">
+    <view class="rewardImage1" wx:if="{{isShow}}">
+      <image class ="rewardImg" mode="heightFix" bindtap="hideReward" src="{{baseUrl+reward.image}}"/>
+    </view>
+    <view class="rewardImage2" wx:else>
+      <image class ="rewardImg" mode="heightFix" bindtap="showReward" src="{{baseUrl+'/image/reward_hide.png'}}"/>
+    </view>
+  </view>
+
+
+
+<!-- 
+  <view class="progress">
+    <image class="progressImg" mode="widthFix" src="https://6f63-oc-7gmkp1iw7501906b-1316637035.tcb.qcloud.la/resources/indexIcon.png?sign=2cfd0c6241e5893fa25c40f64e4da46a&t=1681366995"></image>
+    <view class="progressBar">
+      <t-progress theme="plump" percentage="80" />
+       <van-progress percentage="{{percentage}}" stroke-width="20"/> 
+    </view>
+  </view> -->
+
+
+  <view class="map">
+    <view class="mapImage">
+      <!-- <image style="width: 30%;" mode="widthFix" src="{{baseUrl+'/image/time_icon.png'}}"></image> -->
+      <image class="innerImg" mode="widthFix" src="{{baseUrl+quest.map}}"></image>
+    </view>
+    <view class="mapText">
+      <text class="innerText">{{quest.name}}</text>
+      <text>\n</text>
+      <text>预计时长：{{quest.maxTime}}</text>
+      <text>预计路程：{{quest.distance}}km</text>
+      <text>任务描述：{{quest.description}}</text>
+    </view>
+  </view>
+
+  <van-divider />
+
+
+
+
+
+</view>

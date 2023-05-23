@@ -1,0 +1,12 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+  padding: 200rpx 0;
+  /* padding: 0 0; */
+  box-sizing: border-box;
+  background: repeating-linear-gradient(to top, #FFF0A7 0%, #CBE9E5 100%);
+} 

@@ -1,0 +1,64 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.history {
+  background-color: white;
+}
+.historyList {
+  font-size: large;
+  width: 90%;
+}
+.best {
+  font-size: large;
+  width: 90%;
+}
+.historyText {
+  padding: 10px;
+  padding-left: 20px;
+}
+.title {
+  width: 90%;
+  font-size: larger;
+  background-color: rgb(226, 226, 226);
+  text-align: center;
+}
+.title2 {
+  width: 100%;
+  font-size: larger;
+  background-color: rgb(226, 226, 226);
+  text-align: center;
+}
+.quest {
+  /* width: 90%; */
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.questList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.questList image {
+  width: 90%;
+}
+.puzzlePart {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+}
+.puzzleImage {
+  width: 100%;
+}

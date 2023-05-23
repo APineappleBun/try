@@ -1,0 +1,48 @@
+<view class="container">
+
+  <view class="puzzlePart">
+    <image mode="aspectFit" class="puzzleImage" mode="widthFix" src="{{baseUrl+puzzle.image}}"></image>
+    <view>{{puzzle.name}}</view>
+  </view>
+
+  <t-divider/>
+  <view class="title">已获得数量：{{currentAmount}}</view>
+
+    <t-divider/>
+
+    <view class="title">最佳记录</view>
+    <view class="best">
+    
+      <view class="history">
+        <view class="historyText">开始时间：{{bestUserQuest.startTime}}</view>
+        <view class="historyText">结束时间：{{bestUserQuest.endTime}}</view>
+        <view class="historyText">用时：{{bestUserQuest.totalTime}}</view>
+      </view>
+    </view>
+    
+    <t-divider/>
+
+    <view class="title">历史记录</view>
+    <view class="historyList" wx:for="{{historyList}}" wx:for-item="history" wx:key="index">
+      <van-cell title="记录{{index}}" border="{{false}}" size="large"/>
+      <view class="history">
+        <view class="historyText">开始时间：{{history.startTime}}</view>
+        <view class="historyText">结束时间：{{history.endTime}}</view>
+        <view class="historyText">用时：{{history.totalTime}}</view>
+      </view>
+    </view>
+
+    <t-divider/>
+
+  <view class="quest">
+    <view class="title2">可获得该拼图任务</view>
+    <t-divider />
+    <view class="questList" wx:for="{{questList}}" wx:for-item="quest" wx:key="index">
+      <image src="{{baseUrl+quest.image}}" mode="widthFix" data-id="{{quest.id}}" bindtap="toDetail"></image>
+      <view>{{quest.name}}</view>
+      <t-divider />
+    </view>
+    
+  </view>
+
+</view>

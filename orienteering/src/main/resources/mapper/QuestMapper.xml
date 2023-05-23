@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.orienteering.mapper.QuestMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.orienteering.entity.Quest">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="destination" column="destination" jdbcType="OTHER"/>
+            <result property="map" column="map" jdbcType="VARCHAR"/>
+            <result property="image" column="image" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="level" column="level" jdbcType="TINYINT"/>
+            <result property="maxTime" column="max_time" jdbcType="TIME"/>
+            <result property="distance" column="distance" jdbcType="INTEGER"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+            <result property="themeId" column="theme_id" jdbcType="INTEGER"/>
+            <result property="rewardId" column="reward_id" jdbcType="INTEGER"/>
+            <result property="puzzleId" column="puzzle_id" jdbcType="INTEGER"/>
+            <result property="attractionId" column="attraction_id" jdbcType="INTEGER"/>
+            <result property="isSwiper" column="is_swiper" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,destination,
+        map,image,description,
+        level,max_time,distance,
+        city,theme_id,reward_id,
+        puzzle_id,attraction_id,is_swiper
+    </sql>
+</mapper>

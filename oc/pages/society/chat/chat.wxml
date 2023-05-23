@@ -1,0 +1,51 @@
+
+<view class='news'>
+
+  <view class="historycon">
+    <scroll-view scroll-y="true"  class="history">
+      <block wx:for="{{messageList}}" wx:key="index">
+          <!--此处为other  -->
+          <!-- <view wx:if="{{item.type==0}}"> -->
+          <view wx:if="{{item.senderId == receiverId}}">
+              <view>
+                  <text class='chat-time'>{{item.createTime}}</text>
+              </view>
+              <view class='other-record'>
+                  <image class='other-head-img' src="{{receiver.avatarUrl}}"></image>
+                  <view class='other-record-content-triangle'></view>
+                  <view class='other-record-content'>
+                      {{item.content}}</view>
+              </view>
+          </view>
+          <!--此处为结尾  -->
+          <!--此处为own  -->
+          <view wx:else>
+              <view>
+                  <text class='chat-time'>{{item.createTime}}</text>
+              </view>
+              <view class='own-record'>
+                  <view class='own-record-content'>{{item.content}}</view>
+                  <view class='own-record-content-triangle'></view>
+                  <image class='own-head-img' src="{{sender.avatarUrl}}"></image>
+              </view>
+          </view>
+          <!-- own结尾  -->
+        </block>
+      </scroll-view>
+  </view>
+  </view>
+
+  <view class='hei' id="hei"></view>
+  <view class="sendmessage">
+  <input class="chat-input" type="emoji" bindinput="bindChange" confirm-type="done" value='{{input}}' placeholder="" />
+  <!-- <t-input placeholder="请输入文字" /> -->
+  <!-- <van-field
+    value="{{ input }}"
+    placeholder="请输入"
+    border="{{ false }}"
+    bind:change="onChange"
+  /> -->
+  <button class="btn" type="primary" plain="true" bindtap="send">发送</button>
+  <input style='display:none' type="" bindinput="bindChange" confirm-type="done" placeholder="" />
+
+</view>

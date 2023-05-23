@@ -1,0 +1,27 @@
+<view class="container">
+
+  <view class="map">
+    <text style="background-color: rgba(255,255,255,0.8);">当前任务</text>
+    <image class= "mapImage" src="{{baseUrl + quest.map}}"/>
+    <button class="enterButton" bind:tap="toCurrent" data-id="{{currentQuest.id}}">进入藏宝图</button>
+  </view>
+  
+  <van-divider/>
+
+  <!-- <view class="item"> -->
+    <view class="questList" wx:for="{{questList}}" wx:for-item="quest" wx:key="index">
+      <view class="questItem" data-puzzleId="{{quest.id}}">
+          <image class="questImage" mode="widthFix" bindtap="toDetail" src="{{baseUrl+quest.image}}"></image>
+        <view class="questText">
+          <text>{{quest.name}}</text>
+          <text style="color: white;background-color:darkcyan;"> 可承接任务 </text>
+        </view>
+      </view>
+    </view>
+  <!-- </view> -->
+
+</view>
+
+
+
+

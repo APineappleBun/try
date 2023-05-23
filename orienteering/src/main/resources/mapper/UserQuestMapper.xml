@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.orienteering.mapper.UserQuestMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.orienteering.entity.UserQuest">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="questState" column="quest_state" jdbcType="TINYINT"/>
+            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="totalTime" column="total_time" jdbcType="TIME"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="questId" column="quest_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,quest_state,start_time,
+        end_time,total_time,user_id,
+        quest_id
+    </sql>
+</mapper>

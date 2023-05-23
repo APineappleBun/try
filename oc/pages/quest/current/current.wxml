@@ -1,0 +1,71 @@
+<view class="container">
+
+  <view class="currQuest">
+    <view class="map">
+      <image class ="img" mode='aspectFit' src="{{baseUrl+quest.map}}"></image>
+    </view>
+
+    <view wx:if="{{currentQuest.questState == 0}}" class="choice">
+      <t-button theme="light" size="large" variant="outline" class="button" bindtap="tapStart">开始</t-button>
+    </view>
+    
+    <view wx:if="{{currentQuest.questState == 1}}" class="choice">
+      <t-button theme="light" size="large" variant="outline" class="button" bindtap="tapComplete">完成</t-button>
+      <t-button theme="light" size="large" variant="outline" class="button" bindtap="tapGiveUp">放弃</t-button>
+    </view>
+
+    <van-divider/>
+
+    <view class="time" style="{{bgStyle}}">
+      <view class="bestTime">
+        <text>历史最佳：{{bestTime}}</text>
+      </view>
+      <view class="currTime">
+        <view style="writing-mode: vertical-lr;">
+          <text>已用时</text>
+        </view>
+        <view style="font-size: 38px;">
+          <text>{{timer.hours}}</text>
+          <text>：</text>
+          <text>{{timer.minutes}}</text>
+          <text>：</text>
+          <text>{{timer.seconds}}</text>
+        </view>
+      </view>
+        <!-- <text>：</text>
+        <text>{{millseconds}}</text> -->
+      <!-- </view> -->
+    </view>
+  </view>
+
+    <view class="progress">
+      <image class="progressImg" mode="widthFix" src="{{baseUrl + '/image/progress_icon.png'}}"></image>
+      <view class="progressBar">
+        <t-progress theme="plump" percentage="{{percentage}}"/>
+      </view>
+    </view>
+
+
+  <view class="reward">
+    <view class="rewardImage1" wx:if="{{isShow}}">
+      <image class ="rewardImg" mode="heightFix" bindtap="hideReward" src="{{ baseUrl + reward.image}}"/>
+      </view>
+    <view class="rewardImage2" wx:else>
+      <image class ="rewardImg" mode="heightFix" bindtap="showReward" src="{{baseUrl + '/image/reward_hide.png'}}"/>
+    </view>
+  </view>
+
+  <van-divider/>
+
+  <view class="attraction">
+    <view class="attractionImage">
+      <!-- <image style="width: 30%;" mode="widthFix" src="{{baseUrl + '/image/city_BG_1.png'}}"></image> -->
+      <image src="{{baseUrl + attraction.image}}"></image>
+    </view>
+    <view class="attractionText">
+      <text style="font-size: 20px;">{{attraction.name}}\n</text>
+      <text>{{attraction.description}}</text>
+    </view>
+  </view>
+
+</view>

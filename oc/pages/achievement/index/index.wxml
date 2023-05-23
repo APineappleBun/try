@@ -1,0 +1,24 @@
+
+<view class="container">
+
+  <view class="total" style="{{bgStyle}}">
+    <!-- <image src="{{baseUrl + background}}" class="totalBackground"></image> -->
+    <view class="totalContent">
+      <text style="font-size: 30px">越野排名</text>
+      <text>您已完成{{achievement.questAmount}}次越野，点亮{{achievement.cityAmount}}座城市，全国排名为第{{achievement.ranking}}名</text>
+    </view>  
+    
+  </view>
+
+
+
+  <view class="item2">
+    <view class="themeList" wx:for="{{themeList}}" wx:for-item = "theme" wx:key="index">
+      <view class="themeItem">
+        <image class="themeImage" mode="aspectFill" src="{{baseUrl+theme.image}}" bindtap="toDetail" data-id="{{theme.id}}"></image>
+        <view class="themeText">{{theme.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+

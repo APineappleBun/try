@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "weixin",
+      "type": "com.example.orienteering.properties.WeixinProperties",
+      "sourceType": "com.example.orienteering.properties.WeixinProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "weixin.appid",
+      "type": "java.lang.String",
+      "sourceType": "com.example.orienteering.properties.WeixinProperties"
+    },
+    {
+      "name": "weixin.get-access-token-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.orienteering.properties.WeixinProperties"
+    },
+    {
+      "name": "weixin.get-phone-number-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.orienteering.properties.WeixinProperties"
+    },
+    {
+      "name": "weixin.jscode2session-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.orienteering.properties.WeixinProperties"
+    },
+    {
+      "name": "weixin.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.example.orienteering.properties.WeixinProperties"
+    }
+  ],
+  "hints": []
+}

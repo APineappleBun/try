@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.orienteering.mapper.AchievementMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.orienteering.entity.Achievement">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="questAmount" column="quest_amount" jdbcType="INTEGER"/>
+            <result property="cityAmount" column="city_amount" jdbcType="INTEGER"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,quest_amount,city_amount,
+        description,user_id
+    </sql>
+</mapper>

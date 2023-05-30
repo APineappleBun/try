@@ -1,5 +1,0 @@
-<view class="container" style="{{bgStyle}}">
-  <view class="button-example">
-    <t-button theme="primary" size="large" block open-type="getUserInfo" bindtap="toLogin">微信一键登录</t-button>
-  </view>
-</view>

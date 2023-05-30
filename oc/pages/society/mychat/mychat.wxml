@@ -1,6 +1,0 @@
-<view class="container">
-  <view class="friendList" wx:for="{{friendList}}" wx:key="index">
-    <t-cell title="{{item.friendName}}" image="{{item.friendAvatarUrl}}" hover arrow>
-    </t-cell>
-  </view>
-</view>
